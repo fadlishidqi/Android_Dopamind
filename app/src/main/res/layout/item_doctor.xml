@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="8dp"
+    app:cardCornerRadius="16dp"
+    app:cardBackgroundColor="#FBFBFB"
+    app:strokeColor="#F6F6F6"
+    app:strokeWidth="2dp"
+    app:cardElevation="0dp">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/doctorImage"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/RoundedImageView"
+            app:strokeColor="#FBFBFB"
+            app:strokeWidth="2dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+
+        <TextView
+            android:id="@+id/doctorName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_semibold"
+            app:layout_constraintStart_toEndOf="@id/doctorImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/doctorImage"/>
+
+        <TextView
+            android:id="@+id/specialtyLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Clinical psychologist"
+            android:textSize="12sp"
+            android:textColor="#666666"
+            android:fontFamily="@font/poppins_regular"
+            app:layout_constraintStart_toStartOf="@id/doctorName"
+            app:layout_constraintTop_toBottomOf="@id/doctorName"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/experienceChip"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:textSize="12sp"
+            android:textColor="#ffff"
+            android:fontFamily="@font/poppins_regular"
+            app:chipBackgroundColor="#A4D4CC"
+            app:chipStrokeWidth="0dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/doctorImage"/>
+
+        <TextView
+            android:id="@+id/priceText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:textSize="14sp"
+            android:textColor="#32A08F"
+            android:fontFamily="@font/poppins_bold"
+            app:layout_constraintStart_toEndOf="@id/experienceChip"
+            app:layout_constraintTop_toTopOf="@id/experienceChip"
+            app:layout_constraintBottom_toBottomOf="@id/experienceChip"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBook"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:text="Book"
+            android:textAllCaps="false"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="12sp"
+            android:backgroundTint="#A4D4CC"
+            app:cornerRadius="16dp"
+            android:paddingHorizontal="16dp"
+            android:minHeight="0dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/experienceChip"
+            app:layout_constraintBottom_toBottomOf="@id/experienceChip"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

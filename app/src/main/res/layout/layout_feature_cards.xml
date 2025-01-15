@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- Left Card: Diary Journal -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/red_day_card"
+        android:layout_width="0dp"
+        android:layout_height="230dp"
+        android:backgroundTint="#AEC9FD"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintEnd_toStartOf="@id/side_cards_container"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.40">
+
+        <!-- Card Content -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/diary_journal_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Smart Diary"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/mood_tracker_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="-10dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Journal"
+                android:textColor="#4397E6"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/diary_journal_text" />
+
+            <TextView
+                android:id="@+id/mood_tracker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="-10dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Detection"
+                android:textColor="#4397E6"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mood_tracker_text" />
+
+            <TextView
+                android:id="@+id/btn_diary_write"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/bg_btn_whiteblue"
+                android:focusable="true"
+                android:fontFamily="@font/poppins_semibold"
+                android:gravity="center"
+                android:padding="2dp"
+                android:text="Write Now"
+                android:textColor="@color/black"
+                android:textSize="8sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="84dp"
+                android:layout_height="140dp"
+                android:layout_marginStart="80dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/foto_ceweduduk"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Right Cards Container -->
+    <LinearLayout
+        android:id="@+id/side_cards_container"
+        android:layout_width="0dp"
+        android:layout_height="230dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/red_day_card"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.50">
+
+        <!-- Top Card: EduCare -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/educare_card"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="1"
+            android:backgroundTint="#A4D4CC"
+            app:cardCornerRadius="16dp">
+
+            <!-- Card Content -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/educare_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="EduCare And"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/consultation_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Article"
+                    android:layout_marginTop="-10dp"
+                    android:textColor="#32A08F"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/educare_title" />
+
+                <TextView
+                    android:id="@+id/btn_educare_check"
+                    android:layout_width="80dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/bg_btn_whitegreen"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:padding="2dp"
+                    android:text="Check Now"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textColor="@color/black"
+                    android:textSize="8sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/consultation_text" />
+
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="75dp"
+                    android:layout_marginEnd="-10dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/foto_dokterhome"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Bottom Card: Chatbot -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/diary_card"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:backgroundTint="#FFA5BD"
+            app:cardCornerRadius="16dp">
+
+            <!-- Card Content -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/dopi_chatbot_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Dopi Chat"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/counseling_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Counseling"
+                    android:layout_marginTop="-10dp"
+                    android:textColor="#FF6262"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="@id/dopi_chatbot_text"
+                    app:layout_constraintTop_toBottomOf="@id/dopi_chatbot_text" />
+
+                <TextView
+                    android:id="@+id/btn_chatbot_start"
+                    android:layout_width="80dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/bg_btn_whitepink"
+                    android:focusable="true"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:gravity="center"
+                    android:padding="2dp"
+                    android:text="Get Started"
+                    android:textColor="@color/black"
+                    android:textSize="8sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/counseling_text" />
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="90dp"
+                    android:layout_marginStart="8dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/foto_diary"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="20dp"
+    app:cardCornerRadius="16dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp">
+
+        <ImageView
+            android:id="@+id/music_cover"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/foto_cover_music"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/artist_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="Olivia Rodrigo"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/music_cover"
+            app:layout_constraintTop_toTopOf="@id/music_cover" />
+
+        <TextView
+            android:id="@+id/song_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="GUTS"
+            android:textColor="#666666"
+            app:layout_constraintStart_toEndOf="@id/music_cover"
+            app:layout_constraintTop_toBottomOf="@id/artist_name" />
+
+        <ImageView
+            android:id="@+id/audio_wave"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="12dp"
+            android:src="@drawable/foto_audio_wave"
+            app:layout_constraintEnd_toStartOf="@id/heart_icon"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/heart_icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:src="@drawable/foto_heart"
+            app:layout_constraintEnd_toStartOf="@id/play_icon"
+            app:layout_constraintTop_toTopOf="@id/music_cover" />
+
+        <ImageView
+            android:id="@+id/play_icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="12dp"
+            android:src="@drawable/foto_play"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/music_cover" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

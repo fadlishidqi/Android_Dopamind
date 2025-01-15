@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/sidebar"
+    android:layout_width="300dp"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:elevation="8dp"
+    android:padding="20dp">
+
+    <ImageView
+        android:id="@+id/btn_close_sidebar"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:clickable="true"
+        android:contentDescription="Close Sidebar"
+        android:focusable="true"
+        android:src="@drawable/ic_close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/divider_top"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:background="#CCCCCC"
+        app:layout_constraintTop_toBottomOf="@id/btn_close_sidebar" />
+
+    <ImageView
+        android:id="@+id/btn_logout"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="22dp"
+        android:clickable="true"
+        android:contentDescription="Logout Icon"
+        android:focusable="true"
+        android:src="@drawable/ic_logout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider_top"/>
+
+    <TextView
+        android:id="@+id/profile_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="16dp"
+        android:text="Putri"
+        android:fontFamily="@font/poppins_medium"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@id/sidebar_profile_image"
+        app:layout_constraintTop_toBottomOf="@+id/divider_top" />
+
+    <ImageView
+        android:id="@+id/sidebar_profile_image"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:contentDescription="Profile Image"
+        android:scaleType="centerCrop"
+        android:src="@drawable/foto_profile_pic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider_top" />
+
+    <View
+        android:id="@+id/divider_profile"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:background="#CCCCCC"
+        app:layout_constraintTop_toBottomOf="@id/sidebar_profile_image" />
+
+    <!-- Profile Section -->
+    <TextView
+        android:id="@+id/profile_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Profile"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@id/btn_edit_profile"
+        app:layout_constraintTop_toBottomOf="@id/divider_profile" />
+
+    <ImageView
+        android:id="@+id/btn_edit_profile"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:clickable="true"
+        android:contentDescription="Profile Icon"
+        android:focusable="true"
+        android:src="@drawable/ic_profile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/profile_label" />
+
+    <!-- Settings Section -->
+    <TextView
+        android:id="@+id/settings_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="20dp"
+        android:text="Settings"
+        android:fontFamily="@font/poppins_medium"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@id/btn_settings"
+        app:layout_constraintTop_toBottomOf="@id/profile_label" />
+
+    <ImageView
+        android:id="@+id/btn_settings"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:clickable="true"
+        android:contentDescription="Settings Icon"
+        android:focusable="true"
+        android:src="@drawable/ic_settings"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/settings_label" />
+
+    <View
+        android:id="@+id/divider_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#CCCCCC"
+        app:layout_constraintBottom_toTopOf="@id/dopamind_footer" />
+
+    <ImageView
+        android:id="@+id/dopamind_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="70dp"
+        android:contentDescription="Footer Image"
+        android:src="@drawable/foto_dopamind_footer"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="horizontal"
+    android:paddingVertical="8dp"
+    android:paddingHorizontal="12dp"
+    android:gravity="center">
+
+    <!-- Home Menu -->
+    <LinearLayout
+        android:id="@+id/menu_home"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/btn_home"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_home"
+            android:contentDescription="Home" />
+
+        <TextView
+            android:id="@+id/text_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Home"
+            android:textSize="12sp"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_marginTop="4dp"/>
+    </LinearLayout>
+
+    <!-- History Menu -->
+    <LinearLayout
+        android:id="@+id/menu_history"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/btn_history"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_history"
+            android:contentDescription="History" />
+
+        <TextView
+            android:id="@+id/text_history"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="History"
+            android:textSize="12sp"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_marginTop="4dp"/>
+    </LinearLayout>
+
+    <!-- SOS Menu -->
+    <LinearLayout
+        android:id="@+id/menu_sos"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center">
+
+            <ImageButton
+                android:id="@+id/btn_sos"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_sos"
+                android:padding="12dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_notification"
+                android:contentDescription="SOS" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_sos_border"
+                android:padding="2dp"/>
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/text_sos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SOS"
+            android:textSize="12sp"
+            android:fontFamily="@font/poppins_semibold"
+            android:textColor="#FF9999"
+            android:layout_marginTop="4dp"/>
+    </LinearLayout>
+
+    <!-- Booking Menu -->
+    <LinearLayout
+        android:id="@+id/menu_booking"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/btn_booking"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_booking"
+            android:contentDescription="Booking" />
+
+        <TextView
+            android:id="@+id/text_booking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Booking"
+            android:textSize="12sp"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_marginTop="4dp"/>
+    </LinearLayout>
+
+    <!-- Chatbot Menu -->
+    <LinearLayout
+        android:id="@+id/menu_chatbot"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/btn_chatbot"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_chatbot"
+            android:contentDescription="Chatbot" />
+
+        <TextView
+            android:id="@+id/text_chatbot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chatbot"
+            android:textSize="12sp"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_marginTop="4dp"/>
+    </LinearLayout>
+
+</LinearLayout>

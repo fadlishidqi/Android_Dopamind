@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white"
+            android:elevation="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical">
+
+                <ImageButton
+                    android:id="@+id/btnBack"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_backarrowios" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:gravity="center"
+                    android:text="Emergency Center"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+                <View
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginEnd="26dp"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Location and Profile Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:baselineAligned="false">
+
+                    <!-- Left Side: Username & Message -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginEnd="24dp">
+
+                        <TextView
+                            android:id="@+id/tvUsername"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Hi, Username"
+                            android:textSize="16sp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Need help? We're here for you"
+                            android:textSize="12sp"
+                            android:layout_marginTop="4dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:textColor="#666666" />
+                    </LinearLayout>
+
+                    <!-- Right Side: Location -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="end"
+                        android:layout_gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Your Location"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/tvLocation"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Update location"
+                            android:textSize="12sp"
+                            android:maxWidth="150dp"
+                            android:maxLines="2"
+                            android:ellipsize="end"
+                            android:gravity="end"
+                            android:layout_marginTop="4dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:textColor="#FF9999" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Main Emergency Button Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginTop="32dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Emergency Button"
+                    android:textSize="24sp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hold for 3 seconds to call emergency"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="#666666"
+                    android:layout_marginTop="8dp" />
+
+                <FrameLayout
+                    android:layout_width="280dp"
+                    android:layout_height="280dp"
+                    android:layout_marginTop="24dp"
+                    android:padding="15dp">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnSos"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="SOS"
+                        android:textSize="40sp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:backgroundTint="#E86C6B"
+                        app:cornerRadius="140dp"
+                        app:elevation="0dp"
+                        android:stateListAnimator="@null" />
+
+                </FrameLayout>
+            </LinearLayout>
+
+            <!-- FAQ Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Health FAQ"
+                android:textSize="18sp"
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="@color/black"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="24dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- FAQ Item 1: Panic Attack -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/layoutPanicAttack"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="16dp"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:background="?attr/selectableItemBackground">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="What to do during a panic attack?"
+                                android:textSize="14sp"
+                                android:fontFamily="@font/poppins_semibold"
+                                android:textColor="@color/black" />
+
+                            <ImageView
+                                android:id="@+id/imgPanicArrow"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/ic_arrow_down"
+                                android:rotation="0" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tvPanicContent"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="16dp"
+                            android:paddingTop="0dp"
+                            android:visibility="gone"
+                            android:text="Focus on breathing slowly and deeply. Find a quiet place if possible. Remember that panic attacks are temporary and will pass."
+                            android:textSize="12sp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:textColor="#666666" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#F0F0F0" />
+                    </LinearLayout>
+
+                    <!-- FAQ Item 2: Breathing Problems -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/layoutBreathing"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="16dp"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:background="?attr/selectableItemBackground">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="How to handle breathing difficulties?"
+                                android:textSize="14sp"
+                                android:fontFamily="@font/poppins_semibold"
+                                android:textColor="@color/black" />
+
+                            <ImageView
+                                android:id="@+id/imgBreathingArrow"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/ic_arrow_down"
+                                android:rotation="0" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tvBreathingContent"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="16dp"
+                            android:paddingTop="0dp"
+                            android:visibility="gone"
+                            android:text="Sit upright, stay calm, and try pursed-lip breathing. Open windows for fresh air. If symptoms persist or worsen, seek immediate medical help."
+                            android:textSize="12sp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:textColor="#666666" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#F0F0F0" />
+                    </LinearLayout>
+
+                    <!-- FAQ Item 3: Anxiety -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/layoutAnxiety"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="16dp"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:background="?attr/selectableItemBackground">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Tips for managing anxiety"
+                                android:textSize="14sp"
+                                android:fontFamily="@font/poppins_semibold"
+                                android:textColor="@color/black" />
+
+                            <ImageView
+                                android:id="@+id/imgAnxietyArrow"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/ic_arrow_down"
+                                android:rotation="0" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tvAnxietyContent"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="16dp"
+                            android:paddingTop="0dp"
+                            android:visibility="gone"
+                            android:text="Practice deep breathing exercises, try grounding techniques, and focus on the present moment. Regular exercise and adequate sleep can help reduce anxiety."
+                            android:textSize="12sp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:textColor="#666666" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

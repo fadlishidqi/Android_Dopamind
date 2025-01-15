@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.auth.LoginActivity">
+
+    <!-- Background Image -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/foto_bglogin"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <!-- White Overlay Card -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="200dp"
+        android:background="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="24dp">
+
+            <TextView
+                android:id="@+id/tv_app_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Welcome Back"
+                android:fontFamily="@font/poppins_bold"
+                android:textColor="#32A08F"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Login to your account"
+                android:textSize="16dp"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="#757575"
+                android:alpha="0.8"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_app_name" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layout_login_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                app:hintEnabled="false"
+                android:background="@android:color/transparent"
+                app:layout_constraintTop_toBottomOf="@id/subtitle">
+
+                <com.example.new_dopamind.ui.auth.customview.EmailInputEditText
+                    android:id="@+id/ed_login_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:background="@drawable/square_input"
+                    android:fontFamily="@font/poppins_regular"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress"
+                    android:paddingHorizontal="16dp"
+                    android:textSize="16sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layout_login_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:hintEnabled="false"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="#757575"
+                app:passwordToggleDrawable="@drawable/ic_password_toggle"
+                app:layout_constraintTop_toBottomOf="@id/layout_login_email">
+
+                <com.example.new_dopamind.ui.auth.customview.PasswordInputEditText
+                    android:id="@+id/ed_login_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:background="@drawable/square_input"
+                    android:fontFamily="@font/poppins_regular"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:paddingHorizontal="16dp"
+                    android:textSize="16sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <CheckBox
+                android:id="@+id/cb_remember"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Remember Me"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="#666666"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layout_login_password" />
+
+            <TextView
+                android:id="@+id/tv_forgot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/forgot_password"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="#32A08F"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/cb_remember"
+                app:layout_constraintBottom_toBottomOf="@id/cb_remember" />
+
+            <LinearLayout
+                android:id="@+id/btn_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/bg_btn_mintdiary"
+                app:layout_constraintTop_toBottomOf="@id/cb_remember">
+
+                <TextView
+                    android:id="@+id/tv_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:text="@string/login"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:gravity="center" />
+
+                <ProgressBar
+                    android:id="@+id/pb_login"
+                    android:layout_width="24dp"
+                    android:layout_height="56dp"
+                    android:layout_gravity="center"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="24dp"
+                app:layout_constraintTop_toBottomOf="@id/btn_login"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <TextView
+                    android:id="@+id/belumpunyaakun_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Don't have an account? "
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="#666666"/>
+
+                <TextView
+                    android:id="@+id/daftarsekarang_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sign up"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textColor="#32A08F"/>
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

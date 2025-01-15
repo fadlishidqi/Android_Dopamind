@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:usesCleartextTraffic="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/ic_dopamind"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_dopamind"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.New_dopamind"
+        tools:targetApi="31">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAQUMKdhtdFkrFsRe5ayFxJZ_TWU0a_s-s" />
+
+        <activity
+            android:name=".ui.splash.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.auth.RegisterActivity"
+            android:exported="true">
+        </activity>
+
+        <activity
+            android:name=".ui.auth.LoginActivity"
+            android:exported="true">
+        </activity>
+
+        <activity
+            android:name=".ui.main.HomeActivity"
+            android:exported="false">
+        </activity>
+
+        <activity
+            android:name=".ui.main.DiaryActivity"
+            android:exported="false">
+        </activity>
+
+        <activity
+            android:name=".ui.main.PredictionResultActivity"
+            android:exported="false">
+        </activity>
+
+        <activity
+            android:name=".ui.main.HistoryActivity"
+            android:exported="false">
+        </activity>
+
+        <activity
+
+            android:name=".ui.main.DiaryDetailActivity"
+            android:exported="false">
+        </activity>
+
+        <activity
+            android:name=".ui.main.ChatActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize">
+        </activity>
+
+        <activity
+            android:name=".ui.main.SosActivity"
+            android:exported="false">
+        </activity>
+
+        <activity
+            android:name=".ui.main.SosDetailActivity"
+            android:exported="false">
+        </activity>
+
+        <activity
+            android:name=".ui.main.EducareActivity"
+            android:exported="false">
+        </activity>
+
+        <activity
+            android:name=".ui.main.BookingActivity"
+            android:exported="false">
+        </activity>
+
+        <activity
+            android:name=".ui.main.PaymentActivity"
+            android:exported="false">
+        </activity>
+
+        <activity
+            android:name=".ui.main.PaymentConfirmationActivity"
+            android:exported="false">
+        </activity>
+
+    </application>
+</manifest>
